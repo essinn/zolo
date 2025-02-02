@@ -2,21 +2,30 @@
 
 Zolo is a Simple CLI tool to run tasks defined in YAML or JSON configs.
 
-**Table of Contents**
+<h4>What it does:<h4>
+
+It defines and runs complex task workflows (e.g., build, test, deploy) with dependencies, retries, and parallel execution.
+
+<h4>Why it’s useful:<h4>
+
+Developers often write custom scripts for task automation, but managing dependencies and retries can be messy. This package would provide a clean, declarative way to define and run tasks.
+
+## Table of Contents
 
 - [Installation](#step-1-installation)
 - [Create a Task Configuration File](#step-2-create-a-task-configuration-file)
 - [Run the CLI Tool](#step-3-run-the-cli-tool)
 - [Expected Output](#step-4-output)
 - [Advanced Use Cases](#advanced-use-cases)
+- [Key Features](#key-features)
 
-## **Step 1: Installation**
+## Step 1: Installation
 
 ```bash
 npm i zolo
 ```
 
-## **Step 2: Create a Task Configuration File**
+## Step 2: Create a Task Configuration File
 
 Example _tasks.yaml_:
 
@@ -56,7 +65,7 @@ Example _tasks.json_
 }
 ```
 
-## **Step 3: Run the CLI Tool**
+## Step 3: Run the CLI Tool
 
 ```bash
 zolo --config tasks.yaml
@@ -66,7 +75,7 @@ zolo --config tasks.yaml
 zolo --config tasks.json
 ```
 
-## **Step 4: Output**
+## Step 4: Output
 
 When the user runs the CLI tool, they’ll see output like this:
 
@@ -87,7 +96,13 @@ If a task fails and retries are configured, they’ll see something like this:
 ✔ Running task: npm run deploy
 ```
 
-## **Advanced Use Cases**
+## Key Features
+
+- Define tasks in a YAML or JSON config.
+- Support for parallel and sequential execution.
+- Retry failed tasks with exponential backoff.
+
+## Advanced Use Cases
 
 - Parallel Execution:
 
