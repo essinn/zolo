@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "lint": {
+      "command": "npm run lint"
+    },
+    "build": {
+      "command": "npm run build",
+      "dependsOn": ["lint"]
+    },
+    "test": {
+      "command": "npm test",
+      "dependsOn": ["build"]
+    },
+    "deploy": {
+      "command": "npm run deploy",
+      "dependsOn": ["test"],
+      "retries": 3
+    }
+  }
+}

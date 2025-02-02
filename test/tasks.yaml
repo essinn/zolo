@@ -1,0 +1,6 @@
+tasks:
+  build:
+    command: "echo 'Building...'"
+  test:
+    command: "echo 'Testing...'"
+    dependsOn: ["build"]
