@@ -1,14 +1,11 @@
 <h1>Zolo</h1>
-<h1>Zolo</h1>
 
 Zolo is a Simple CLI tool to run tasks defined in YAML or JSON configs.
 
 <h4>What it does:</h4>
-<h4>What it does:</h4>
 
 It defines and runs complex task workflows (e.g., build, test, deploy) with dependencies, retries, and parallel execution.
 
-<h4>Why it’s useful:</h4>
 <h4>Why it’s useful:</h4>
 
 Developers often write custom scripts for task automation, but managing dependencies and retries can be messy. This package would provide a clean, declarative way to define and run tasks.
@@ -98,8 +95,6 @@ If a task fails and retries are configured, they’ll see something like this:
 ✔ Running task: npm test
 ✔ Running task: npm run deploy
 ```
-
-## Step 5: Advanced Use Cases
 
 ## Step 5: Advanced Use Cases
 
