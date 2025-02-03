@@ -1,23 +1,23 @@
-<h1>Zolo<h1>
+<h1>Zolo</h1>
 
 Zolo is a Simple CLI tool to run tasks defined in YAML or JSON configs.
 
-<h4>What it does:<h4>
+<h4>What it does:</h4>
 
 It defines and runs complex task workflows (e.g., build, test, deploy) with dependencies, retries, and parallel execution.
 
-<h4>Why it’s useful:<h4>
+<h4>Why it’s useful:</h4>
 
 Developers often write custom scripts for task automation, but managing dependencies and retries can be messy. This package would provide a clean, declarative way to define and run tasks.
 
 ## Table of Contents
 
-- [Installation](#step-1-installation)
-- [Create a Task Configuration File](#step-2-create-a-task-configuration-file)
-- [Run the CLI Tool](#step-3-run-the-cli-tool)
-- [Expected Output](#step-4-output)
-- [Advanced Use Cases](#advanced-use-cases)
-- [Key Features](#key-features)
+1. [Installation](#step-1-installation)
+2. [Create a Task Configuration File](#step-2-create-a-task-configuration-file)
+3. [Run the CLI Tool](#step-3-run-the-cli-tool)
+4. [Expected Output](#step-4-output)
+5. [Advanced Use Cases](#step-5-advanced-use-cases)
+6. [Key Features](#key-features)
 
 ## Step 1: Installation
 
@@ -27,7 +27,7 @@ npm i zolo
 
 ## Step 2: Create a Task Configuration File
 
-Example _tasks.yaml_:
+Example `tasks.yaml`:
 
 ```yaml
 tasks:
@@ -44,7 +44,7 @@ tasks:
 
 or
 
-Example _tasks.json_
+Example `tasks.json`:
 
 ```json
 {
@@ -96,17 +96,11 @@ If a task fails and retries are configured, they’ll see something like this:
 ✔ Running task: npm run deploy
 ```
 
-## Key Features
-
-- Define tasks in a YAML or JSON config.
-- Support for parallel and sequential execution.
-- Retry failed tasks with exponential backoff.
-
-## Advanced Use Cases
+## Step 5: Advanced Use Cases
 
 - Parallel Execution:
 
-If the user wants to run tasks in parallel, they can modify the tasks.yaml file:
+If the user wants to run tasks in parallel, they can modify the `tasks.yaml` file:
 
 ```yaml
 tasks:
@@ -119,10 +113,6 @@ tasks:
     dependsOn: ["lint", "build"] # Run "lint" and "build" in parallel
 ```
 
-- Custom Retry Delay:
-
-If the user wants to customize the retry delay, they can modify the runTask function in src/runner.js to accept a delay parameter.
-
 - Environment Variables:
 
 The user can use environment variables in their commands:
@@ -132,3 +122,9 @@ tasks:
   deploy:
     command: "npm run deploy --env=${DEPLOY_ENV}"
 ```
+
+## Key Features
+
+- Define tasks in a YAML or JSON config.
+- Support for parallel and sequential execution.
+- Retry failed tasks with exponential backoff.
