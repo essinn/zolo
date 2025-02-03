@@ -128,9 +128,3 @@ tasks:
 - Define tasks in a YAML or JSON config.
 - Support for parallel and sequential execution.
 - Retry failed tasks with exponential backoff.
-
-## Key Features
-
-- Define tasks in a YAML or JSON config.
-- Support for parallel and sequential execution.
-- Retry failed tasks with exponential backoff.
